@@ -3,6 +3,7 @@
   src: url("font/Montserrat-Medium.ttf");
 }
 body {
+  position: relative;
   width: 100%;
 }
 
@@ -19,6 +20,7 @@ header {
   margin: 0;
   background-image: url("image/bg.jpg");
   padding-top: 10px;
+  overflow: hidden;
 }
 header .menu {
   width: 100%;
@@ -111,8 +113,78 @@ header .contianer-titer .contianer-titer_titer button i {
   font-size: 20px;
   color: white;
 }
+header .openmenumobile {
+  display: none;
+  width: 100%;
+  text-align: left;
+  background-image: url("image/bg.jpg");
+  padding: 13px 40px;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+header .menumobile {
+  position: fixed;
+  top: 0;
+  width: 288px;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: white;
+  z-index: 5;
+}
+header .menumobile div {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("image/bg.jpg");
+}
+header .menumobile div .closemenu {
+  font-size: 30px;
+}
+header .menumobile ul {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  list-style-type: none;
+  text-decoration: none;
+}
+header .menumobile ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+header .menumobile ul li:hover a {
+  color: #0d6b6a;
+}
+header .menumobile ul li:first-child a {
+  color: #0d6b6a;
+}
+header .menumobile input {
+  position: absolute;
+  bottom: 0;
+  background-color: #0d6b6a;
+  cursor: pointer;
+  border: 0px;
+  width: 100%;
+  height: 44px;
+  font-size: 14px;
+  color: white;
+}
 
 @media (max-width: 850px) {
+  header {
+    background-image: url("");
+    background-color: white;
+    padding-top: 0;
+  }
   header .menu {
     display: none;
   }
@@ -130,6 +202,9 @@ header .contianer-titer .contianer-titer_titer button i {
   }
   header .contianer-titer .contianer-titer_titer h1 {
     font-size: 48px;
+  }
+  header .openmenumobile {
+    display: block;
   }
 }
 .contianer-team {

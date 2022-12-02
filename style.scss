@@ -6,6 +6,7 @@ $Primary: #0d6b6a;
 }
 
 body {
+  position: relative;
   width: 100%;
 }
 * {
@@ -21,6 +22,7 @@ header {
   margin: 0;
   background-image: url("image/bg.jpg");
   padding-top: 10px;
+  overflow: hidden;
   .menu {
     width: 100%;
     margin: auto;
@@ -71,15 +73,12 @@ header {
     gap: 130px;
     padding-bottom: 100px;
     .contianer-titer_image {
-      // width: 470px;
-      // height: 484px;
       width: 40%;
       img {
         width: 100%;
       }
     }
     .contianer-titer_titer {
-      // width: 570px;
       width: 40%;
       display: flex;
       justify-content: flex-start;
@@ -99,7 +98,6 @@ header {
         color: #666666;
       }
       button {
-        // width: 229px;
         width: 50%;
         height: 56px;
         background-color: $Primary;
@@ -119,9 +117,79 @@ header {
       }
     }
   }
+  .openmenumobile {
+    display: none;
+    width: 100%;
+    text-align: left;
+    background-image: url("image/bg.jpg");
+    padding: 13px 40px;
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  .menumobile {
+    position: fixed;
+    top: 0;
+    width: 288px;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: white;
+    z-index: 5;
+    div {
+      width: 100%;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-image: url("image/bg.jpg");
+      .closemenu {
+        font-size: 30px;
+      }
+    }
+    ul {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 16px;
+      list-style-type: none;
+      text-decoration: none;
+      li {
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 18px;
+        }
+      }
+      li:hover a {
+        color: $Primary;
+      }
+      li:first-child a {
+        color: $Primary;
+      }
+    }
+    input {
+      position: absolute;
+      bottom: 0;
+      background-color: $Primary;
+      cursor: pointer;
+      border: 0px;
+      width: 100%;
+      height: 44px;
+      font-size: 14px;
+      color: white;
+    }
+  }
 }
 @media (max-width: 850px) {
   header {
+    background-image: url("");
+    background-color: white;
+    padding-top: 0;
     .menu {
       display: none;
     }
@@ -139,6 +207,9 @@ header {
           font-size: 48px;
         }
       }
+    }
+    .openmenumobile {
+      display: block;
     }
   }
 }

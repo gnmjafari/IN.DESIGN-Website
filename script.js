@@ -167,3 +167,15 @@ prev.addEventListener("click", function () {
     // dot[n + 1].classList.add("dot-active");
   }
 });
+
+var OpenMenuMobile = document.getElementsByClassName("menumobile");
+var open = document.querySelector(".openmenumobile");
+var close = document.querySelector(".closemenu");
+
+open.addEventListener("click", function () {
+  OpenMenuMobile[0].style.display = "flex";
+});
+
+close.addEventListener("click", function () {
+  OpenMenuMobile[0].style.display = "none";
+});
