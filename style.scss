@@ -518,7 +518,7 @@ header {
   padding-top: 90px;
   margin-bottom: -400px;
   h1 {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -544,11 +544,25 @@ header {
       align-items: flex-start;
       flex-direction: column;
       gap: 30px;
-      h3 {
+      .titer {
         font-size: 22px;
         margin-bottom: 20px;
         padding-bottom: 30px;
         border-bottom: 2px solid #dddddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        h3 {
+          font-size: 22px;
+          z-index: 3;
+          margin-right: -25px;
+        }
+        span {
+          font-size: 52px;
+          color: #dddddd;
+          z-index: 2;
+        }
       }
       .box-more {
         display: flex;
@@ -594,6 +608,7 @@ header {
       font-size: 20px;
       padding: 5px;
       justify-content: center;
+      width: 100%;
     }
     .contianer-workprocess_box {
       flex-direction: column;
@@ -730,10 +745,15 @@ footer {
     align-items: center;
     flex-direction: column;
     gap: 60px;
-    padding-top: 100px;
+    padding-top: 35px;
     padding-bottom: 60px;
-    border-top: 2px solid white;
-    border-radius: 450%;
+    .line {
+      width: 100%;
+      margin-bottom: -160px;
+      img {
+        width: 100%;
+      }
+    }
     h2 {
       color: white;
     }
@@ -818,6 +838,9 @@ footer {
   footer {
     .contianer-footer {
       border: 0px;
+      .line {
+        display: none;
+      }
     }
     .contactus {
       flex-direction: column;
