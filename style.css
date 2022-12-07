@@ -323,6 +323,7 @@ header .menumobile input {
   .contianer-team {
     align-items: center;
     margin-bottom: 80px;
+    margin-top: 20px;
   }
   .contianer-team .contianer-team_box {
     flex-direction: column;
@@ -714,7 +715,6 @@ header .menumobile input {
 footer {
   background-color: #0d6b6a;
   width: 100%;
-  padding: 20px;
   overflow: hidden;
 }
 footer .contianer-footer {
@@ -724,32 +724,41 @@ footer .contianer-footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 60px;
-  padding-top: 35px;
+  gap: 70px;
   padding-bottom: 60px;
+  padding-top: 50px;
 }
 footer .contianer-footer .line {
+  background-image: url("image/line.svg");
+  background-position: center;
+  background-size: contain;
+  background-position-y: top;
+  background-repeat: no-repeat;
   width: 100%;
-  margin-bottom: -160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
 }
-footer .contianer-footer .line img {
-  width: 100%;
-}
-footer .contianer-footer h2 {
+footer .contianer-footer .line h2 {
+  font-size: 28px;
   color: white;
 }
-footer .contianer-footer p {
+footer .contianer-footer .line p {
   font-size: 14px;
   text-align: center;
   color: #dddddd;
+  margin-bottom: 20px;
 }
-footer .contianer-footer .socialmedia {
+footer .contianer-footer .line .socialmedia {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-footer .contianer-footer .socialmedia div {
+footer .contianer-footer .line .socialmedia div {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -759,7 +768,7 @@ footer .contianer-footer .socialmedia div {
   align-items: center;
   cursor: pointer;
 }
-footer .contianer-footer .socialmedia div i {
+footer .contianer-footer .line .socialmedia div i {
   color: white;
   font-size: 20px;
 }
@@ -780,7 +789,8 @@ footer .contianer-footer .contactus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  gap: 20px;
 }
 footer .contianer-footer .contactus .contactus-form {
   display: flex;
@@ -813,22 +823,30 @@ footer .contianer-footer .contactus .contactus-form .contactus-form_phoneandemai
 }
 
 @media (max-width: 750px) {
-  footer .contianer-footer {
-    border: 0px;
-  }
-  footer .contianer-footer .line {
-    display: none;
-  }
-  footer .contactus {
+  footer .contianer-footer .contactus {
     flex-direction: column;
     gap: 80px;
   }
-  footer .contactus .contactus-form {
+  footer .contianer-footer .contactus .contactus-form {
     flex-direction: column;
   }
 }
 @media (max-width: 500px) {
+  footer .contianer-footer {
+    gap: 50px;
+    padding-bottom: 40px;
+  }
+  footer .contianer-footer .line {
+    gap: 24px;
+    padding: 30px 16px;
+    padding-bottom: 0px;
+  }
+  footer .contianer-footer .line p {
+    margin-bottom: 8px;
+    width: 100%;
+  }
   footer .contianer-footer .morelink {
     flex-direction: column;
+    gap: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
